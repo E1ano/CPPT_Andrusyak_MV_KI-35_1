@@ -39,14 +39,17 @@ public class Lab2AndrusiakKI35 {
         PrintWriter fout = new PrintWriter(dataFile);
 
         arr = new char[nRows][];
+
         for(int i = 0; i < nRows; i++)
         {
-            if(i+1 <= nRows/2) {
-                arr[i]= new char[i+1];
-            }
-            else {
-                arr[i]= new char[nRows-i];
-            }
+//            if(i+1 <= nRows/2) {
+//                arr[i]= new char[i+1];
+//            }
+//            else {
+//                arr[i]= new char[nRows-i];
+//            }
+
+            arr[i] = (i+1 <= nRows/2) ? (new char[i+1]):(new char[nRows-i]);
         }
 
 
@@ -57,8 +60,8 @@ public class Lab2AndrusiakKI35 {
             System.out.println("No character entered");
         } else if(filler.length() == 1) {
             for(int i=0; i<nRows; i++) {
-                for(int j=0; j<arr[i].length; j++)
-                {
+                for(int j=0; j<arr[i].length; j++) {
+                    if()
                     arr[i][j]=(char)filler.codePointAt(0);
                     System.out.print(arr[i][j]);
                     fout.print(arr[i][j]);
