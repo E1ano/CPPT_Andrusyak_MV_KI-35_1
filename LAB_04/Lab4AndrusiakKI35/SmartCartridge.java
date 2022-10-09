@@ -6,7 +6,6 @@ public class SmartCartridge extends Cartridge implements AutoAimCartridge, Chang
 
     public SmartCartridge(Bullet bullet, Powder powder, CartridgeCase cartridgeCase, int bulletEnergy) throws FileNotFoundException {
         super(bullet, powder, cartridgeCase, bulletEnergy);
-
     }
 
     public SmartCartridge(Bullet bullet, Powder powder) throws FileNotFoundException {
@@ -28,4 +27,6 @@ public class SmartCartridge extends Cartridge implements AutoAimCartridge, Chang
         String oldShape = super.getCartridgeCase().getShape();
         super.setCartridgeCase(newShape, 2022);
     }
+
 }
+

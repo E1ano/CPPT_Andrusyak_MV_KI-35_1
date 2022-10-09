@@ -10,6 +10,8 @@ public abstract class Cartridge {
     private Powder powder;
     private CartridgeCase cartridgeCase;
     private int bulletEnergy;
+
+    public static int count = 0;
     public PrintWriter fout; // об'єкт для запису інформації
     //-------------ОБ'ЄКТИ КЛАСУ-----------------//
 
@@ -21,6 +23,7 @@ public abstract class Cartridge {
         this.powder = powder;
         this.bulletEnergy = bulletEnergy;
 
+        count ++;
         fout = new PrintWriter(new File("MethodDesc.txt"));
         fout.print("The cartridge was created!\n");
     }
@@ -120,5 +123,9 @@ public abstract class Cartridge {
 
     public void dispose() {
         fout.close();
+    }
+
+    public void getCount() {
+        fout.print("Was created - " + count + " object!");
     }
 }

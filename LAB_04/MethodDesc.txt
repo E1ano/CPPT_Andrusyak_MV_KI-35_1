@@ -1,4 +1,2 @@
 The cartridge was created!
-The target is captured!
-Changed : round to acuminate
-Changed : 1917 to 2022
+Was created - 3 object!
